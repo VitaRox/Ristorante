@@ -9,7 +9,6 @@ function Order() {
   const [portion, setPortion] = useState("");
   const [specialRequest, setSpecialRequest] = useState("n/a");
 
-  // const order = () => {
     return (
       <div>
         <form className="orderForm">
@@ -23,25 +22,24 @@ function Order() {
           />
           <input
             value={portion}
-            onChange={e => setDish(e.target.value)}
-            placeholder="Name of a dish"
+            onChange={e => setPortion(e.target.value)}
+            placeholder="Enter portion size, lunch or dinner:"
             type="text"
-            name="dishName"
+            name="portion"
             required
            />
           <input
-            value={setSpecialRequest}
-            onChange={e => setDish(e.target.value)}
+            value={specialRequest}
+            onChange={e => setSpecialRequest(e.target.value)}
             placeholder="Special requests?"
             type="text"
-            name={specialRequest}
+            name="specialRequest"
             required
           />
         </form>
-        <button type="submit" className="submitButton">Submit guest order</button>
+      <button type="submit" className="submitButton">Submit guest order</button>
       </div>
     );
-  // };
 };
 
 export default Order;
